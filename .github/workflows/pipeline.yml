@@ -27,7 +27,7 @@ jobs:
               with:
                 command: npm run test:e2e
                 start: npm run start
-                wait-on: http://localhost:3001
+                wait-on: http://localhost:8000
             - uses: actions/checkout@v2
             - name: Deploy
               uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
