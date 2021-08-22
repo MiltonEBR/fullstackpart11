@@ -44,6 +44,10 @@ app.get('/info', (req, res) => {
   })
 })
 
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
 app.get('/persons/:id', (req, res, next) => {
   const { id } = req.params
   // const person = persons.find((person) => person.id === parseInt(id))

@@ -35,8 +35,8 @@ jobs:
                 heroku_api_key: ${{secrets.HEROKU_API_KEY}}
                 heroku_app_name: "warm-mesa-47321" #Must be unique in Heroku
                 heroku_email: "A01634505@itesm.mx"
-                healthcheck: "https://warm-mesa-47321.herokuapp.com/api/info"
-                checkstring: "Phonebook has info"
+                healthcheck: "https://warm-mesa-47321.herokuapp.com/api/health"
+                checkstring: "ok"
                 rollbackonhealthcheckfailed: true
               if: ${{ github.event_name == 'push' }}
             - name: Bump version and push tag
